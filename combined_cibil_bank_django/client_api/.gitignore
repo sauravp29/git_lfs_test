@@ -1,0 +1,5 @@
+_dynamic_modules/
+!_dynamic_modules/.gitkeep
+!_dynamic_modules/__init__.py
+*.tar
+env_vars.docker

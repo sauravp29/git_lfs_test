@@ -1,0 +1,37 @@
+# This is controller file you can expect behvaiour change in processing code
+# if any entry went wrong here
+# All the things in the section will get converted to a df eventually
+# If any section is there in json and variables are not getting formed please check json entry
+# Also that df will also get renamed 
+
+
+# This column must be there to map every data point to its id please provide exact path in json 
+# You can add as many ids here this will then become part of your sections
+
+mandatoryInformations:
+  "application_id": "lead__c"
+  'application_created_date': 'createddate_opportunity'
+
+      
+transactions : 
+  'application_id': 'lead__c'
+  'created_date': 'createddate_opportunity'
+  'date': 'date__c'
+  'type': 'txn_type'
+  'description': 'description__c'
+  'amount': 'amount__c'
+  'balance': 'current_balance__c'
+  
+default_config_dict:
+    "created_date_format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    "created_date_format_unit": ""
+    "transaction_date_format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    "transaction_date_format_unit": ""
+    'deduce_type_from_amount' : False
+    
+advancedConfigs:
+    json_type: "DataFrame"
+    
+    
+
+# If any section is missing please put "null"
