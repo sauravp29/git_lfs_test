@@ -1,9 +1,0 @@
-version: '3.2'
-services:
-    client-api:
-        build: .
-        image: ftcash_cibil_and_bank_combined
-        container_name: ftcash_features_container
-        restart: always
-        ports:
-            - "8080:8080"
